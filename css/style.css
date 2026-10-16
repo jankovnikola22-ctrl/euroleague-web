@@ -71,7 +71,7 @@ form label {
     width: 50px;
     background-color: var(--accent-color);
     fill: var(--base-color);
-    color: green;
+    color: rgb(244, 247, 244);
     border-radius: 10px 0  0 10px;
     display: flex;
     justify-content: center;
