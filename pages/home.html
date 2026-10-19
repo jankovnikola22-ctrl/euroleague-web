@@ -22,7 +22,13 @@
             <a href="fantasy.html">Fantasy</a>
         </nav>
 
-        <a class="sign-in" href="login.html">Sign in</a>
+        
+<div class="account-area">
+    <span id="user-greeting"></span>
+    <a class="sign-in" id="sign-in-link" href="login.html">Sign in</a>
+    <a class="sign-in" id="logout-link" href="#" style="display: none;">Log out</a>
+</div>
+
     </header>
 
     <main>
@@ -131,5 +137,11 @@
             <a href="login.html">Sign in</a>
         </nav>
     </footer>
+
+    
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../js/supabase-client.js"></script>
+<script src="../js/home-auth.js"></script>
+
 </body>
 </html>
