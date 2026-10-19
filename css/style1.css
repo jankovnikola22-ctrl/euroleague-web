@@ -169,7 +169,7 @@ a {
     content: "";
 }
 
-.account-area .logout-button {
+.account-area .account-action {
     min-height: 42px;
     gap: 8px;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -180,19 +180,39 @@ a {
     font-family: inherit;
 }
 
-.account-area .logout-button svg {
+.account-area .account-action svg {
     width: 16px;
     height: 16px;
 }
 
-.account-area .logout-button:hover,
-.account-area .logout-button:focus-visible {
+.account-area #sign-in-link {
+    position: relative;
+    width: 120px;
+}
+
+.account-area #sign-in-link svg {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.account-area #sign-in-link span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    white-space: nowrap;
+    transform: translate(-50%, -50%);
+}
+
+.account-area .account-action:hover,
+.account-area .account-action:focus-visible {
     border-color: var(--orange);
     background: var(--orange);
     color: #171717;
 }
 
-.account-area .logout-button:focus-visible {
+.account-area .account-action:focus-visible {
     outline: 2px solid var(--paper);
     outline-offset: 3px;
 }
@@ -686,7 +706,7 @@ main {
         font-size: 0.76rem;
     }
 
-    .account-area .logout-button {
+    .account-area .account-action {
         min-height: 38px;
         padding: 0 12px;
         font-size: 0.76rem;
