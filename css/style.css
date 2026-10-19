@@ -140,6 +140,12 @@ a:hover{
         border-radius: 0;
     }
 }
+@media(max-width: 1100px){
+    .auth-title {
+        color: #fff;
+        text-shadow: 0 2px 8px rgba(8, 36, 69, .9);
+    }
+}
 .incorrect label {
     background-color: red;
 }
@@ -167,6 +173,5 @@ a:hover{
     text-align: center;
     margin-top: 250px;
 }
-
 
 

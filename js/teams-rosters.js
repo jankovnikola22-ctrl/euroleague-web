@@ -1,4 +1,3 @@
-
 const teams = [
     {
         name: "Anadolu Efes Istanbul",
@@ -8,7 +7,7 @@ const teams = [
     {
         name: "Armani Olimpia Milan",
         code: "mil",
-        logo: "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/5c2f0ab6-f86a-4df0-b2f3-f9ab92f7267b.png?width=96&resizeType=fill&format=webp"
+        logo: "https://thumb.wikimedia.org/wikipedia/en/thumb/3/3d/Pallacanestro_Olimpia_Milano_logo.svg/1280px-Pallacanestro_Olimpia_Milano_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail"
     },
     {
         name: "Besiktas Istanbul",
@@ -93,12 +92,12 @@ const teams = [
     {
         name: "Virtus Bologna",
         code: "vir",
-        logo: ""
+        logo: "https://thumb.wikimedia.org/wikipedia/sr/thumb/1/16/KK_Virtus_Bologna.png/250px-KK_Virtus_Bologna.png?utm_source=sr.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
     },
     {
         name: "Zalgiris Kaunas",
         code: "zal",
-        logo: ""
+        logo: "https://thumb.wikimedia.org/wikipedia/en/thumb/0/0e/BC_%C5%BDalgiris_logo.svg/1280px-BC_%C5%BDalgiris_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail"
     }
 ];
 
@@ -172,6 +171,7 @@ function renderTeams(query = "") {
     });
 }
 
+/*
 function showRoster(team) {
     selectedTeamCode = team.code;
     overview.hidden = true;
@@ -181,6 +181,11 @@ function showRoster(team) {
     rosterLogoFrame.replaceChildren(...logo.childNodes);
     window.scrollTo({ top: 0, behavior: "smooth" });
     backButton.focus({ preventScroll: true });
+}
+    */
+
+function showRoster(team) {
+    window.location.href = `team.html?team=${team.code}`;
 }
 
 function showOverview() {

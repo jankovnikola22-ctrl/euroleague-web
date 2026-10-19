@@ -1,0 +1,213 @@
+
+.team-page {
+    width: min(1200px, calc(100% - 40px));
+    min-height: 72vh;
+    margin: 0 auto;
+    padding-top: 48px;
+    padding-bottom: 70px;
+}
+
+.team-header {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin: 30px 0 48px;
+    padding: 30px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: rgba(17, 24, 32, 0.74);
+}
+
+.team-main-logo {
+    width: 110px;
+    height: 110px;
+    padding: 10px;
+    border-radius: 50%;
+    background: #fff;
+    object-fit: contain;
+}
+
+.team-header-details {
+    min-width: 0;
+}
+
+.team-header-details h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.1;
+}
+
+.team-coach {
+    margin-top: 12px;
+    color: var(--muted);
+}
+
+.roster-section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 22px;
+}
+
+.roster-section-heading h2 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.player-count {
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.player-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.player-card {
+    position: relative;
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: linear-gradient(155deg, rgba(27, 37, 47, 0.96), rgba(14, 20, 27, 0.96));
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+    transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.player-card::before {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 18px;
+    left: 18px;
+    height: 2px;
+    border-radius: 0 0 2px 2px;
+    background: linear-gradient(90deg, transparent, var(--orange), transparent);
+    content: "";
+    opacity: 0;
+    transition: opacity 180ms ease;
+}
+
+.player-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(244, 119, 33, 0.62);
+    box-shadow: 0 18px 34px rgba(0, 0, 0, 0.34), 0 0 22px rgba(244, 119, 33, 0.08);
+}
+
+.player-card:hover::before {
+    opacity: 1;
+}
+
+.player-number {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    min-height: 30px;
+    margin: 14px 0 10px 18px;
+    padding: 4px 10px;
+    border: 1px solid rgba(244, 119, 33, 0.5);
+    border-radius: 6px;
+    background: rgba(17, 24, 32, 0.96);
+    color: var(--orange);
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    line-height: 1;
+}
+
+.player-card h3 {
+    margin: 0 18px 8px;
+    color: var(--paper);
+    font-size: 1.12rem;
+    font-weight: 750;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+}
+
+.player-card p {
+    margin: 0 18px 6px;
+    color: var(--muted);
+    font-size: 0.82rem;
+    line-height: 1.45;
+}
+
+.player-card p:first-of-type {
+    color: var(--orange);
+    font-size: 0.76rem;
+    font-weight: 750;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.player-card p:last-child {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+    .player-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .team-page {
+        width: calc(100% - 28px);
+        padding-top: 30px;
+    }
+
+    .team-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+        padding: 22px;
+    }
+
+    .team-main-logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .player-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+}
+
+@media (max-width: 380px) {
+    .player-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.player-photo {
+    display: block;
+    width: 100%;
+    height: clamp(170px, 20vw, 240px);
+    object-fit: contain;
+    object-position: center bottom;
+    padding: 12px 12px 0;
+    border-radius: 12px 12px 0 0;
+    background:
+        radial-gradient(ellipse at 50% 100%, rgba(244, 119, 33, 0.13), transparent 68%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0));
+    transition: transform 220ms ease;
+}
+
+.player-card:hover .player-photo {
+    transform: scale(1.035);
+}
+
+@media (max-width: 650px) {
+    .player-photo {
+        height: clamp(160px, 42vw, 210px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .player-card,
+    .player-card::before,
+    .player-photo {
+        transition: none;
+    }
+}
