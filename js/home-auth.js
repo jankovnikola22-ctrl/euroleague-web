@@ -21,7 +21,7 @@ async function updateHeader() {
 
         greeting.textContent = `Hi, ${name}!`;
         signInLink.style.display = "none";
-        logoutLink.style.display = "inline-block";
+        logoutLink.style.display = "inline-flex";
     } else {
         greeting.textContent = "";
         signInLink.style.display = "inline-block";
@@ -29,9 +29,7 @@ async function updateHeader() {
     }
 }
 
-logoutLink.addEventListener("click", async (event) => {
-    event.preventDefault();
-
+logoutLink.addEventListener("click", async () => {
     const { error } = await supabaseClient.auth.signOut();
 
     if (error) {

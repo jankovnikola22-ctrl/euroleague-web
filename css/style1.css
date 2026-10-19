@@ -137,6 +137,66 @@ a {
     background: #ff994e;
 }
 
+.account-area {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.account-area #user-greeting:not(:empty) {
+    display: inline-flex;
+    min-height: 42px;
+    align-items: center;
+    padding: 0 14px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--paper);
+    font-size: 0.82rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.account-area #user-greeting:not(:empty)::before {
+    width: 8px;
+    height: 8px;
+    margin-right: 9px;
+    border-radius: 50%;
+    background: var(--orange);
+    box-shadow: 0 0 12px rgba(244, 119, 33, 0.55);
+    content: "";
+}
+
+.account-area .logout-button {
+    min-height: 42px;
+    gap: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--paper);
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.account-area .logout-button svg {
+    width: 16px;
+    height: 16px;
+}
+
+.account-area .logout-button:hover,
+.account-area .logout-button:focus-visible {
+    border-color: var(--orange);
+    background: var(--orange);
+    color: #171717;
+}
+
+.account-area .logout-button:focus-visible {
+    outline: 2px solid var(--paper);
+    outline-offset: 3px;
+}
+
 main {
     width: min(1160px, calc(100% - 40px));
     margin: 0 auto;
@@ -614,6 +674,22 @@ main {
 
     .brand {
         margin-right: auto;
+    }
+
+    .account-area {
+        gap: 7px;
+    }
+
+    .account-area #user-greeting:not(:empty) {
+        min-height: 38px;
+        padding: 0 10px;
+        font-size: 0.76rem;
+    }
+
+    .account-area .logout-button {
+        min-height: 38px;
+        padding: 0 12px;
+        font-size: 0.76rem;
     }
 
     .main-nav {
