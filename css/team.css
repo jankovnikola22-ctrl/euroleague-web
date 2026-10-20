@@ -154,14 +154,16 @@
 @media (max-width: 650px) {
     .team-page {
         width: calc(100% - 28px);
-        padding-top: 30px;
+        padding-top: 26px;
+        padding-bottom: 44px;
     }
 
     .team-header {
         align-items: flex-start;
         flex-direction: column;
-        gap: 18px;
-        padding: 22px;
+        gap: 14px;
+        margin: 22px 0 34px;
+        padding: 18px;
     }
 
     .team-main-logo {

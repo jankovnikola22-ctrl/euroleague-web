@@ -291,19 +291,48 @@
 @media (max-width: 480px) {
     .teams-main {
         width: calc(100% - 28px);
+        padding-top: 30px;
+        padding-bottom: 44px;
     }
 
     .teams-toolbar {
-        align-items: flex-start;
+        align-items: stretch;
         flex-direction: column;
+        gap: 10px;
+        padding: 12px 0;
+    }
+
+    .team-search-wrap {
+        width: 100%;
+        min-height: 46px;
+    }
+
+    .team-count {
+        font-size: 0.78rem;
     }
 
     .club-grid {
         grid-template-columns: 1fr;
+        gap: 9px;
     }
 
     .club-card {
-        min-height: 88px;
+        min-height: 82px;
+        padding: 10px 12px;
+        gap: 12px;
+    }
+
+    .club-logo-frame {
+        width: 54px;
+        height: 54px;
+    }
+
+    .club-name {
+        font-size: 0.88rem;
+    }
+
+    .back-button {
+        min-height: 44px;
     }
 
     .roster-heading {
@@ -321,7 +350,7 @@
 
     .roster-content {
         height: 68vh;
-        min-height: 400px;
+        min-height: 320px;
     }
 }
 

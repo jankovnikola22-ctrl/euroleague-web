@@ -146,6 +146,55 @@ a:hover{
         text-shadow: 0 2px 8px rgba(8, 36, 69, .9);
     }
 }
+@media(max-width: 600px){
+    body {
+        min-height: 100vh;
+        min-height: 100svh;
+        align-items: stretch;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .wrapper {
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        min-height: 100svh;
+        padding: 36px 22px;
+        justify-content: center;
+        background: rgba(8, 36, 69, .24);
+    }
+
+    .auth-title {
+        max-width: 18ch;
+        font-size: clamp(2rem, 8vw, 2.7rem);
+        line-height: 1.1;
+        overflow-wrap: anywhere;
+    }
+
+    form {
+        margin-top: 24px;
+        margin-bottom: 28px;
+        gap: 12px;
+    }
+
+    form button {
+        min-height: 48px;
+    }
+
+    .wrapper > p {
+        max-width: 34ch;
+        line-height: 1.5;
+    }
+
+    .wrapper > a {
+        margin-top: 12px;
+        color: #fff;
+        font-size: 1.25rem;
+        font-weight: 700;
+        line-height: 1.4;
+    }
+}
 .incorrect label {
     background-color: red;
 }
@@ -173,5 +222,4 @@ a:hover{
     text-align: center;
     margin-top: 250px;
 }
-
 
