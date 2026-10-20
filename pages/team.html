@@ -25,17 +25,23 @@
             <span>EuroLeague</span>
         </a>
 
-        <nav class="main-nav" aria-label="Main navigation">
-            <a href="home.html">Home</a>
-            <a href="teams-rosters.html" aria-current="page">
-                Teams &amp; Rosters
-            </a>
-            <a href="news.html">News</a>
-            <a href="results.html">Table &amp; Results</a>
-            <a href="fantasy.html">Fantasy</a>
-        </nav>
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu"
+                aria-expanded="false" aria-controls="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-        <a class="sign-in" href="login.html">Sign in</a>
+        <div class="mobile-menu" id="mobile-menu">
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="home.html">Home</a>
+                <a href="teams-rosters.html" aria-current="page">Teams &amp; Rosters</a>
+                <a href="news.html">News</a>
+                <a href="results.html">Table &amp; Results</a>
+                <a href="fantasy.html">Fantasy</a>
+            </nav>
+            <a class="sign-in" href="login.html">Sign in</a>
+        </div>
     </header>
 
     <main class="team-page">
@@ -74,5 +80,6 @@
             <a href="login.html">Sign in</a>
         </nav>
     </footer>
+    <script src="../js/header-menu.js"></script>
 </body>
 </html>

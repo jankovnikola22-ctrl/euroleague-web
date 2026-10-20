@@ -14,31 +14,39 @@
             <span>EuroLeague</span>
         </a>
 
-        <nav class="main-nav" aria-label="Main navigation">
-            <a href="home.html" aria-current="page">Home</a>
-            <a href="teams-rosters.html">Teams &amp; Rosters</a>
-            <a href="news.html">News</a>
-            <a href="results.html">Table &amp; Results</a>
-            <a href="fantasy.html">Fantasy</a>
-        </nav>
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu"
+                aria-expanded="false" aria-controls="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-        
-        <div class="account-area">
-            <span id="user-greeting" aria-live="polite"></span>
-            <a class="sign-in account-action" id="sign-in-link" href="login.html">
-                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
-                    <path d="M14 8l4 4-4 4m4-4H9m0-8H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h3"
-                          stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span>Sign in</span>
-            </a>
-            <button class="sign-in account-action" id="logout-link" type="button" style="display: none;">
-                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
-                    <path d="M10 17l5-5-5-5M15 12H3m9-8h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6"
-                          stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span>Log out</span>
-            </button>
+        <div class="mobile-menu" id="mobile-menu">
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="home.html" aria-current="page">Home</a>
+                <a href="teams-rosters.html">Teams &amp; Rosters</a>
+                <a href="news.html">News</a>
+                <a href="results.html">Table &amp; Results</a>
+                <a href="fantasy.html">Fantasy</a>
+            </nav>
+
+            <div class="account-area">
+                <span id="user-greeting" aria-live="polite"></span>
+                <a class="sign-in account-action" id="sign-in-link" href="login.html">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                        <path d="M14 8l4 4-4 4m4-4H9m0-8H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h3"
+                              stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Sign in</span>
+                </a>
+                <button class="sign-in account-action" id="logout-link" type="button" style="display: none;">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                        <path d="M10 17l5-5-5-5M15 12H3m9-8h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6"
+                              stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Log out</span>
+                </button>
+            </div>
         </div>
 
     </header>
@@ -154,6 +162,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="../js/supabase-client.js"></script>
 <script src="../js/home-auth.js"></script>
+<script src="../js/header-menu.js"></script>
 
 </body>
 </html>
